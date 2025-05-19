@@ -17,11 +17,19 @@ function App() {
   }, [city]);
 
   const fetchWeather = async (cityName) => {
-    const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=5&aqi=yes&alerts=no`
-    );
-    const data = await response.json();
-    setWeatherData(data);
+    try {
+      const response = await fetch(
+        `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=5&aqi=yes&alerts=no`
+      );
+      if (!response.ok) {
+        throw new Error('Failed to fetch weather data');
+      }
+      const data = await response.json();
+      setWeatherData(data);
+    } catch (error) {
+      console.error(error);
+      setWeatherData(null);
+    }
   };
 
   return (
@@ -70,7 +78,9 @@ function App() {
               />
               <h2 className="text-4xl font-bold">{weatherData.current.temp_c}°C</h2>
               <p className="text-lg">{weatherData.current.condition.text}</p>
-              <p className="text-sm">{weatherData.location.name}, {weatherData.location.country}</p>
+              <p className="text-sm">
+                {weatherData.location.name}, {weatherData.location.country}
+              </p>
             </div>
 
             <div>
