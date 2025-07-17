@@ -1,12 +1,32 @@
-# React + Vite
+# 🌦️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Screenshot](screenshots/Weather-App.png)
 
-Currently, two official plugins are available:
+## 📌 Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a sleek and responsive **Weather App** developed using **React.js**, designed to deliver real-time weather updates fetched from a public **Weather API**.
 
-## Expanding the ESLint configuration
+The application displays current weather conditions such as temperature, humidity, wind speed, and weather descriptions for any city the user searches. The app also includes a toggleable **dark/light theme**, enhancing user experience across different lighting environments.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✅ Key Features
+
+- 🔍 **Search any city** to get real-time weather info  
+- 🌡️ Displays **temperature**, **weather condition**, **humidity**, and **wind speed**  
+- 🌓 Toggle between **Dark and Light Mode**  
+- ⚡ Built with **React.js** for smooth, dynamic UI  
+- 📱 Fully responsive design – works perfectly on desktop and mobile  
+
+This project helped me practice API integration, component-based UI design, and responsive layouts in React.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js, Tailwind CSS
+- **API**: OpenWeatherMap API 
+- **Deployment**: GitHub Pages 
+
+## 🚀 Live Demo
+
+👉 [Click here to view the project](https://tahir1605.github.io/weather-app/)
+
+---
+
